@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WildTrails | Adventure & Trekking</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    /* 1. GENERAL PAGE */
+
+body {
+    background-color: #f4f3eb;
+    color: #26352a;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* 2. HEADER */
+
+.header {
+    background-color: #173c2b;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+.header h1 {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.header span,
+.footer span {
+    color: #e6c779;
+}
+
+.header p {
+    color: #d7e5d8;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* 3. NAVIGATION */
+
+.navigation {
+    background-color: #28563d;
+    text-align: center;
+    padding: 18px;
+}
+
+.navigation a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 8px 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #e6c779;
+}
+
+
+/* 4. HERO SECTION AND BACKGROUND IMAGE */
+
+.hero {
+    background-image:
+        linear-gradient(
+            rgba(10, 30, 20, 0.45),
+            rgba(10, 30, 20, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    min-height: 430px;
+    padding: 75px 20px;
+
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero-label {
+    color: #e6c779;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.2;
+}
+
+.hero h2 span {
+    color: #e6c779;
+}
+
+.hero-content > p:not(.hero-label) {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #e6c779;
+    color: #173c2b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 25px;
+    margin-top: 20px;
+}
+
+.hero-button:hover {
+    background-color: white;
+}
+
+
+/* 5. INTRODUCTION */
+
+.introduction {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.introduction h2 {
+    color: #173c2b;
+    font-size: 34px;
+}
+
+.introduction > p:not(.section-label) {
+    line-height: 1.9;
+    color: #58665a;
+}
+
+
+/* 6. SECTION HEADINGS */
+
+.section-label {
+    text-align: center;
+    color: #a17a30;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 45px;
+}
+
+.section-title {
+    color: #173c2b;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 12px;
+}
+
+.section-description {
+    color: #69776a;
+    text-align: center;
+    line-height: 1.8;
+    margin: 15px 20px 30px;
+}
+
+
+/* 7. TREKKING CARDS */
+
+#treks {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.trek-container {
+    text-align: center;
+}
+
+.trek-card {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 29%;
+    min-width: 260px;
+    max-width: 390px;
+
+    margin: 15px 1.2% 25px;
+
+    background-color: white;
+    border: 1px solid #d9dfd5;
+    border-bottom: 5px solid #28563d;
+    border-radius: 10px;
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    text-align: left;
+    box-shadow: 0 5px 18px rgba(23, 60, 43, 0.10);
+}
+
+.image-box {
+    position: relative;
+}
+
+.trek-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+
+    background-color: #173c2b;
+    color: white;
+
+    padding: 9px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.trek-info {
+    padding: 20px;
+}
+
+.trek-info h3 {
+    color: #173c2b;
+    font-size: 21px;
+}
+
+.trek-info p {
+    color: #58665a;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.price {
+    color: #a17a30 !important;
+    font-size: 21px !important;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #28563d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-button:hover {
+    background-color: #173c2b;
+}
+
+.trek-card:hover {
+    border-bottom-color: #c49a45;
+    box-shadow: 0 12px 28px rgba(23, 60, 43, 0.18);
+}
+
+
+/* 8. CAMPING SECTION */
+
+.camping-section {
+    background-color: #e7ecdf;
+    padding: 45px 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.camping-section .section-label {
+    margin-top: 10px;
+}
+
+.camping-container {
+    text-align: center;
+}
+
+.camp-card {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 42%;
+    max-width: 480px;
+    min-width: 270px;
+
+    margin: 15px 2% 25px;
+    padding: 0 0 25px;
+
+    background-color: white;
+    border: 1px solid #d5dfd0;
+    border-bottom: 5px solid #28563d;
+    border-radius: 12px;
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(23, 60, 43, 0.10);
+}
+
+.camp-image {
+    position: relative;
+}
+
+.camp-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.camp-info {
+    padding: 10px 15px;
+}
+
+.camp-info h3 {
+    color: #173c2b;
+    font-size: 23px;
+    margin: 22px 10px 12px;
+}
+
+.camp-info p {
+    color: #58665a;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 12px 10px;
+}
+
+.camp-card:hover {
+    border-bottom-color: #c49a45;
+    box-shadow: 0 12px 28px rgba(23, 60, 43, 0.20);
+}
+
+
+/* 9. TRIP SCHEDULE TABLE */
+
+.table-container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #28563d;
+    color: white;
+}
+
+th,
+td {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #d9dfd5;
+}
+
+td {
+    color: #37463a;
+}
+
+tr:nth-child(even) {
+    background-color: #eaf0e6;
+}
+
+tr:hover {
+    background-color: #dce7d6;
+}
+
+.easy {
+    color: #246b37;
+    background-color: #d9f2dc;
+    padding: 6px 9px;
+}
+
+.moderate {
+    color: #8b6411;
+    background-color: #fff0c2;
+    padding: 6px 9px;
+}
+
+.hard {
+    color: #a33126;
+    background-color: #f8d9d5;
+    padding: 6px 9px;
+}
+
+.note {
+    text-align: center;
+    color: #687468;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 25px;
+}
+
+
+/* 10. EQUIPMENT CHECKLIST */
+
+.equipment-section {
+    background-color: #173c2b;
+    padding: 35px 10px 45px;
+    text-align: center;
+}
+
+.equipment-section .section-label {
+    margin-top: 10px;
+}
+
+.equipment-section .section-title {
+    color: white;
+}
+
+.equipment-section .section-description {
+    color: #d7e5d8;
+}
+
+.equipment-container {
+    text-align: center;
+}
+
+.equipment-card {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 29%;
+    min-width: 250px;
+    max-width: 350px;
+
+    background-color: #28563d;
+    color: white;
+
+    padding: 20px;
+    margin: 12px 1%;
+
+    box-sizing: border-box;
+    text-align: left;
+
+    border-top: 4px solid #e6c779;
+    border-radius: 5px;
+}
+
+.equipment-card h3 {
+    color: #e6c779;
+    font-size: 18px;
+}
+
+.equipment-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    border-bottom: 1px solid #55745d;
+    padding-bottom: 8px;
+}
+
+
+/* 11. SAFETY GUIDELINES */
+
+.safety-section {
+    padding: 25px 10px;
+}
+
+.safety-container {
+    text-align: center;
+}
+
+.safety-panel {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 29%;
+    min-width: 250px;
+    max-width: 350px;
+
+    margin: 12px 1%;
+    padding: 20px;
+
+    box-sizing: border-box;
+    text-align: left;
+
+    background-color: white;
+    border-left: 5px solid #c08a2c;
+    border-bottom: 1px solid #d9dfd5;
+}
+
+.safety-panel h3 {
+    color: #173c2b;
+}
+
+.safety-panel p {
+    color: #58665a;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+
+/* 12. ADVENTURE PACKAGES */
+
+.packages-section {
+    background-color: #e7ecdf;
+    padding: 45px 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.packages-section .section-label {
+    margin-top: 10px;
+}
+
+.packages-container {
+    text-align: center;
+}
+
+.package-card {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 27%;
+    min-width: 245px;
+    max-width: 340px;
+
+    min-height: 410px;
+
+    background-color: white;
+    padding: 25px 22px;
+    margin: 15px 1.5% 25px;
+
+    box-sizing: border-box;
+    text-align: center;
+
+    border: 1px solid #d5dfd0;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(23, 60, 43, 0.10);
+}
+
+.package-icon {
+    font-size: 32px;
+    margin-top: 12px;
+}
+
+.package-card h3 {
+    color: #173c2b;
+    font-size: 22px;
+}
+
+.package-card h2 {
+    color: #a17a30;
+    font-size: 34px;
+    margin: 20px 0;
+}
+
+.package-card p {
+    color: #58665a;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.package-card hr {
+    border: none;
+    border-top: 1px solid #d9dfd5;
+    margin: 22px 0;
+}
+
+.package-card.featured {
+    border: 2px solid #28563d;
+}
+
+.package-card.featured h3 {
+    color: #28563d;
+}
+
+.package-card .popular {
+    background-color: #28563d;
+    color: white;
+
+    padding: 12px;
+    margin: -5px 0 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.package-button {
+    display: inline-block;
+    background-color: #28563d;
+    color: white;
+
+    padding: 12px 16px;
+    margin-top: 15px;
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.package-button:hover {
+    background-color: #173c2b;
+}
+
+.package-card:hover {
+    border-color: #a17a30;
+    box-shadow: 0 12px 28px rgba(23, 60, 43, 0.18);
+}
+
+
+/* 13. FOOTER */
+
+.footer {
+    background-color: #10291d;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 45px;
+}
+
+.footer h2 {
+    letter-spacing: 3px;
+}
+
+.footer p {
+    color: #d7e5d8;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-note {
+    color: #a9bdac !important;
+    font-size: 11px !important;
+    margin-top: 20px;
+}
+</style>    
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header" id="home">
+
+        <h1>🏔️ WILD<span>TRAILS</span></h1>
+
+        <p>EXPLORE THE WILD. DISCOVER YOURSELF.</p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navigation">
+
+        <a href="#home">Home</a>
+        <a href="#treks">Trekking</a>
+        <a href="#camping">Camping</a>
+        <a href="#schedule">Schedules</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#safety">Safety</a>
+        <a href="#packages">Packages</a>
+
+    </nav>
+
+
+    <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                YOUR NEXT ADVENTURE STARTS HERE
+            </p>
+
+            <h2>
+                FIND YOUR<br>
+                <span>WILD SIDE.</span>
+            </h2>
+
+            <p>
+                Escape the ordinary. Explore breathtaking mountains,
+                discover peaceful forests and create unforgettable memories.
+            </p>
+
+            <a href="#treks" class="hero-button">
+                EXPLORE ADVENTURES ↓
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="introduction">
+
+        <p class="section-label">WELCOME TO WILDTRAILS</p>
+
+        <h2>Adventure Is Calling!</h2>
+
+        <p>
+            Discover beautiful trekking routes, exciting camping trips
+            and amazing outdoor experiences. Choose your next adventure,
+            challenge yourself and reconnect with nature.
+        </p>
+
+    </section>
+
+
+    <!-- TREKKING DESTINATIONS -->
+
+    <section id="treks">
+
+        <p class="section-label">DISCOVER THE UNKNOWN</p>
+
+        <h2 class="section-title">🏔️ TREKKING DESTINATIONS</h2>
+
+        <p class="section-description">
+            Choose your trail and begin your next adventure.
+        </p>
+
+
+        <div class="trek-container">
+
+            <div class="trek-card">
+
+                <div class="image-box">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+                        alt="Beautiful mountain peaks">
+
+                    <span class="image-label">EASY TREK</span>
+
+                </div>
+
+                <div class="trek-info">
+
+                    <h3>Mountain Escape</h3>
+
+                    <p>
+                        Explore beautiful mountain paths and enjoy
+                        peaceful natural landscapes.
+                    </p>
+
+                    <p>📍 Location: Mountain Trail</p>
+
+                    <p>⏱ Duration: 1 Day</p>
+
+                    <p>🥾 Difficulty: Easy</p>
+
+                    <h3 class="price">₹1,499 / person</h3>
+
+                    <a href="#schedule" class="card-button">
+                        VIEW SCHEDULE
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="trek-card">
+
+                <div class="image-box">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=80"
+                        alt="Hikers walking through a mountain trail">
+
+                    <span class="image-label">MODERATE TREK</span>
+
+                </div>
+
+                <div class="trek-info">
+
+                    <h3>Forest Explorer</h3>
+
+                    <p>
+                        Discover green forests, enjoy fresh air
+                        and experience the beauty of nature.
+                    </p>
+
+                    <p>📍 Location: Forest Trail</p>
+
+                    <p>⏱ Duration: 2 Days</p>
+
+                    <p>🥾 Difficulty: Moderate</p>
+
+                    <h3 class="price">₹2,999 / person</h3>
+
+                    <a href="#schedule" class="card-button">
+                        VIEW SCHEDULE
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="trek-card">
+
+                <div class="image-box">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=900&q=80"
+                        alt="Adventure mountain landscape">
+
+                    <span class="image-label">ADVANCED TREK</span>
+
+                </div>
+
+                <div class="trek-info">
+
+                    <h3>Summit Challenge</h3>
+
+                    <p>
+                        Experience a challenging mountain journey
+                        with proper preparation and expert guidance.
+                    </p>
+
+                    <p>📍 Location: High Mountain Trail</p>
+
+                    <p>⏱ Duration: 3 Days</p>
+
+                    <p>🥾 Difficulty: Hard</p>
+
+                    <h3 class="price">₹4,999 / person</h3>
+
+                    <a href="#schedule" class="card-button">
+                        VIEW SCHEDULE
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAMPING EXPERIENCES -->
+
+    <section class="camping-section" id="camping">
+
+        <p class="section-label">SLEEP UNDER THE STARS</p>
+
+        <h2 class="section-title">⛺ CAMPING EXPERIENCES</h2>
+
+        <p class="section-description">
+            Disconnect from busy life and reconnect with nature.
+        </p>
+
+
+        <div class="camping-container">
+
+            <div class="camp-card">
+
+                <div class="camp-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=900&q=80"
+                        alt="Tent camping in the forest">
+
+                    <span class="image-label">WEEKEND ESCAPE</span>
+
+                </div>
+
+                <div class="camp-info">
+
+                    <h3>Weekend Camping</h3>
+
+                    <p>
+                        Enjoy a peaceful night outdoors, campfire
+                        activities and beautiful natural surroundings.
+                    </p>
+
+                    <p>🗓 Duration: 2 Days / 1 Night</p>
+
+                    <p>🌟 Experience: Beginner Friendly</p>
+
+                    <h3 class="price">₹1,999 / person</h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="camp-card">
+
+                <div class="camp-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=900&q=80"
+                        alt="Camping under the stars">
+
+                    <span class="image-label">WILD EXPERIENCE</span>
+
+                </div>
+
+                <div class="camp-info">
+
+                    <h3>Wild Nature Camp</h3>
+
+                    <p>
+                        Enjoy guided nature walks, outdoor activities
+                        and a relaxing camping experience.
+                    </p>
+
+                    <p>🗓 Duration: 3 Days / 2 Nights</p>
+
+                    <p>🌟 Experience: Nature Adventure</p>
+
+                    <h3 class="price">₹3,499 / person</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRIP SCHEDULE -->
+
+    <section id="schedule">
+
+        <p class="section-label">PLAN YOUR JOURNEY</p>
+
+        <h2 class="section-title">📅 UPCOMING TRIP SCHEDULES</h2>
+
+        <p class="section-description">
+            Find a suitable adventure and plan ahead.
+        </p>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <tr>
+                    <th>Trip Name</th>
+                    <th>Duration</th>
+                    <th>Difficulty</th>
+                    <th>Departure</th>
+                    <th>Price</th>
+                </tr>
+
+                <tr>
+                    <td>Mountain Escape</td>
+                    <td>1 Day</td>
+                    <td><span class="easy">Easy</span></td>
+                    <td>Every Saturday</td>
+                    <td>₹1,499</td>
+                </tr>
+
+                <tr>
+                    <td>Forest Explorer</td>
+                    <td>2 Days</td>
+                    <td><span class="moderate">Moderate</span></td>
+                    <td>Selected Sundays</td>
+                    <td>₹2,999</td>
+                </tr>
+
+                <tr>
+                    <td>Summit Challenge</td>
+                    <td>3 Days</td>
+                    <td><span class="hard">Hard</span></td>
+                    <td>Selected Dates</td>
+                    <td>₹4,999</td>
+                </tr>
+
+                <tr>
+                    <td>Weekend Camping</td>
+                    <td>2 Days</td>
+                    <td><span class="easy">Easy</span></td>
+                    <td>Every Saturday</td>
+                    <td>₹1,999</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <p class="note">
+            Note: Dates and prices are sample details for this student project.
+        </p>
+
+    </section>
+
+
+    <!-- EQUIPMENT CHECKLIST -->
+
+    <section class="equipment-section" id="equipment">
+
+        <p class="section-label">PACK SMART. TRAVEL SAFE.</p>
+
+        <h2 class="section-title">🎒 EQUIPMENT CHECKLIST</h2>
+
+        <p class="section-description">
+            Make sure you are prepared before starting your journey.
+        </p>
+
+
+        <div class="equipment-container">
+
+            <div class="equipment-card">
+
+                <h3>🥾 Trekking Essentials</h3>
+
+                <p>☑ Comfortable trekking shoes</p>
+
+                <p>☑ Backpack</p>
+
+                <p>☑ Water bottle</p>
+
+                <p>☑ Weather-appropriate clothing</p>
+
+                <p>☑ Rain jacket</p>
+
+            </div>
+
+
+            <div class="equipment-card">
+
+                <h3>⛺ Camping Essentials</h3>
+
+                <p>☑ Tent and sleeping bag</p>
+
+                <p>☑ Torch or headlamp</p>
+
+                <p>☑ Warm clothes</p>
+
+                <p>☑ Personal hygiene items</p>
+
+                <p>☑ Reusable food containers</p>
+
+            </div>
+
+
+            <div class="equipment-card">
+
+                <h3>🩹 Safety Essentials</h3>
+
+                <p>☑ First-aid kit</p>
+
+                <p>☑ Emergency contact details</p>
+
+                <p>☑ Fully charged phone</p>
+
+                <p>☑ Personal medicines, if needed</p>
+
+                <p>☑ Offline route map</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SAFETY GUIDELINES -->
+
+    <section class="safety-section" id="safety">
+
+        <p class="section-label">SAFETY COMES FIRST</p>
+
+        <h2 class="section-title">⚠️ SAFETY GUIDELINES</h2>
+
+        <p class="section-description">
+            Adventure is more enjoyable when you stay safe.
+        </p>
+
+
+        <div class="safety-container">
+
+            <div class="safety-panel">
+
+                <h3>🥾 Before the Trek</h3>
+
+                <p>✔ Check weather and trail conditions.</p>
+
+                <p>✔ Choose a suitable difficulty level.</p>
+
+                <p>✔ Inform someone about your route.</p>
+
+                <p>✔ Follow the organizer's instructions.</p>
+
+            </div>
+
+
+            <div class="safety-panel">
+
+                <h3>⛰️ During the Adventure</h3>
+
+                <p>✔ Stay with your group.</p>
+
+                <p>✔ Drink water and take regular breaks.</p>
+
+                <p>✔ Follow marked trails and guide instructions.</p>
+
+                <p>✔ Avoid dangerous cliffs and wildlife.</p>
+
+            </div>
+
+
+            <div class="safety-panel">
+
+                <h3>🌿 Protect Nature</h3>
+
+                <p>✔ Carry your waste back with you.</p>
+
+                <p>✔ Do not damage plants or disturb wildlife.</p>
+
+                <p>✔ Use designated campsites.</p>
+
+                <p>✔ Follow local fire safety rules.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADVENTURE PACKAGES -->
+
+    <section class="packages-section" id="packages">
+
+        <p class="section-label">CHOOSE YOUR ADVENTURE</p>
+
+        <h2 class="section-title">💚 ADVENTURE PACKAGES</h2>
+
+        <p class="section-description">
+            Find a package that suits your travel plans.
+        </p>
+
+
+        <div class="packages-container">
+
+            <div class="package-card">
+
+                <div class="package-icon">🌱</div>
+
+                <h3>Explorer</h3>
+
+                <h2>₹1,499</h2>
+
+                <p>One-day guided trek</p>
+
+                <hr>
+
+                <p>✓ Guided route</p>
+
+                <p>✓ Basic trip briefing</p>
+
+                <p>✓ Group activities</p>
+
+                <p>✗ Overnight stay</p>
+
+                <a href="#schedule" class="package-button">
+                    EXPLORE TRIPS
+                </a>
+
+            </div>
+
+
+            <div class="package-card featured">
+
+                <p class="popular">✦ POPULAR CHOICE ✦</p>
+
+                <div class="package-icon">🏕️</div>
+
+                <h3>Adventure</h3>
+
+                <h2>₹2,999</h2>
+
+                <p>Two-day outdoor experience</p>
+
+                <hr>
+
+                <p>✓ Guided trek</p>
+
+                <p>✓ Camping experience</p>
+
+                <p>✓ Group activities</p>
+
+                <p>✓ Basic camping equipment</p>
+
+                <a href="#schedule" class="package-button">
+                    EXPLORE TRIPS
+                </a>
+
+            </div>
+
+
+            <div class="package-card">
+
+                <div class="package-icon">🏔️</div>
+
+                <h3>Summit Pro</h3>
+
+                <h2>₹4,999</h2>
+
+                <p>Three-day guided adventure</p>
+
+                <hr>
+
+                <p>✓ Experienced guide</p>
+
+                <p>✓ Planned trekking route</p>
+
+                <p>✓ Camping arrangements</p>
+
+                <p>✓ Safety briefing</p>
+
+                <a href="#schedule" class="package-button">
+                    EXPLORE TRIPS
+                </a>
+
+            </div>
+
+        </div>
+
+        <p class="note">
+            Prices and package inclusions are examples for demonstration.
+            Confirm actual details with the trip organizer.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <h2>🏔️ WILD<span>TRAILS</span></h2>
+
+        <p>Explore More. Climb Higher. Live Freely.</p>
+
+        <p>Adventure & Trekking Website | 2026</p>
+
+        <p class="footer-note">
+            A student project created using HTML and CSS.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
